@@ -1,0 +1,42 @@
+# All paths are prefixed by "/user" in /app/config/routing.yml
+
+# Profile
+profile_show:
+  path:     /{id}
+  defaults: { _controller: AntonUserBundle:Profile:show }
+  requirements:
+    id:     \d+
+
+profile_edit:
+  path:     /{id}/edit
+  defaults: { _controller: AntonUserBundle:Profile:edit }
+  requirements:
+    id:     \d+
+
+profile_options:
+  path:     /{id}/options
+  defaults: { _controller: AntonUserBundle:Profile:options }
+  requirements:
+    id:     \d+
+
+# Registration
+register:
+  path:     /register
+  defaults: { _controller: AntonUserBundle:Registration:register }
+
+comfirm-email:
+  path:     /comfirm-email/{token}
+  defaults: { _controller: AntonUserBundle:Registration:confirmEmail }
+
+# Authorization
+login:
+  path:     /login
+  defaults: { _controller: AntonUserBundle:Authorization:login }
+
+logout:
+  path:     /logout
+  defaults: { _controller: AntonUserBundle:Authorization:logout }
+  
+restore:
+  path:     /restore
+  defaults: { _controller: AntonUserBundle:Authorization:restore }

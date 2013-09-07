@@ -1,0 +1,4 @@
+anton_user:
+    resource: "@AntonUserBundle/Resources/config/routing.yml"
+    prefix:   /user
+
